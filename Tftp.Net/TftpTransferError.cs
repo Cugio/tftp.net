@@ -31,7 +31,7 @@ namespace Tftp.Net
 
         public TftpErrorPacket(ushort errorCode, string errorMessage)
         {
-            if (String.IsNullOrEmpty(errorMessage))
+            if (errorMessage == null)
                 throw new ArgumentException("You must provide an errorMessage.");
 
             this.ErrorCode = errorCode;
